@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details</title>
+<style>
+    .size-options {
+        margin-top: 10px;
+    }
+
+    .size-option {
+        border: 1px solid #ccc;
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .size-option.active {
+        background-color: #f0ad4e; /* Màu nền khi được chọn */
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+<div class="col-sm-7">
+    <div class="product-information">
+        <img src="images/product-details/new.jpg" class="newarrival img-responsive" alt="" />
+        <h2>Anne Klein Sleeveless Colorblock Scuba</h2>
+        <p>Web ID: 1089772</p>
+        <img src="images/product-details/rating.png" class="img-responsive" alt="" />
+        <span>
+            <span>US $59</span>
+            <label>Số lượng:</label>
+            <input type="text" value="1" />
+            <div class="btn-group">
+                <button type="button" class="btn btn-fefault cart">
+                    <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
+                </button>
+                <button type="button" class="btn btn-fefault cart">
+                    <i class="fa fa-heart"></i> Yêu thích
+                </button>
+            </div>
+        </span>
+        <br>
+        <span>
+            <div class="size-options">
+                <button class="size-option" data-size="38">38</button>
+                <button class="size-option" data-size="39">39</button>
+                <button class="size-option" data-size="40">40</button>
+                <button class="size-option" data-size="41">41</button>
+                <button class="size-option" data-size="42">42</button>
+                <button class="size-option" data-size="43">43</button>
+            </div>
+        </span>
+        <p><b>Availability:</b> In Stock</p>
+        <p><b>Condition:</b> New</p>
+        <p><b>Brand:</b> E-SHOPPER</p>
+        <a href=""><img src="images/product-details/share.png" class="share img-responsive" alt="" /></a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.size-option').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.size-option').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
+</body>
+</html>

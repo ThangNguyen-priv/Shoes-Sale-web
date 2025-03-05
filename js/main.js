@@ -50,3 +50,42 @@ $(document).ready(function () {
 		}
 	});
 });
+
+// script chọn kích cỡ
+document.addEventListener('DOMContentLoaded', (event) => {
+	document.querySelectorAll('.size-option').forEach(button => {
+		button.addEventListener('click', function() {
+			document.querySelectorAll('.size-option').forEach(btn => btn.classList.remove('active'));
+			this.classList.add('active');
+		});
+	});
+});
+
+//hướng dẫn chọn size khi ấn vào link footer
+document.addEventListener("DOMContentLoaded", function () {
+    // Tạo modal và thêm vào body
+    const modalHTML = `
+        <div id="sizeGuideModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Hướng dẫn chọn size</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="https://myshoes.vn/image/catalog/banner/chon-size.png" alt="Hướng dẫn chọn size" class="img-responsive">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+
+    document.body.insertAdjacentHTML("beforeend", modalHTML);
+});
+
+$(document).on("click", "#openSizeGuide", function (e) {
+	e.preventDefault();
+	$("#sizeGuideModal").modal("show");
+});

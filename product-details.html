@@ -91,10 +91,9 @@
 							</ul>
 						</div>
 					</div>
-
 					<!-- phần tìm kiếm -->
 					<div class="col-sm-3">
-						<div class="search_box pull-right">
+						<div class="search_box">
 							<input type="text" placeholder="Tìm kiếm" />
 						</div>
 					</div>
@@ -122,26 +121,26 @@
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
-								<img src="images/product-details/1.jpg" alt="" />
+								<img src="images/product-details/1.jpg" alt="" class="img-responsive"/>
 								<h3>ZOOM</h3>
 							</div>
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
 								  <!-- Wrapper for slides -->
 								    <div class="carousel-inner">
 										<div class="item active">
-										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
+										  <a href=""><img src="images/product-details/similar1.jpg" alt=""class="img-responsive"></a>
+										  <a href=""><img src="images/product-details/similar2.jpg" alt=""class="img-responsive"></a>
+										  <a href=""><img src="images/product-details/similar3.jpg" alt=""class="img-responsive"></a>
 										</div>
 										<div class="item">
-										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
+										  <a href=""><img src="images/product-details/similar1.jpg" alt=""class="img-responsive"></a>
+										  <a href=""><img src="images/product-details/similar2.jpg" alt=""class="img-responsive"></a>
+										  <a href=""><img src="images/product-details/similar3.jpg" alt=""class="img-responsive"></a>
 										</div>
 										<div class="item">
-										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
+										  <a href=""><img src="images/product-details/similar1.jpg" alt=""class="img-responsive"></a>
+										  <a href=""><img src="images/product-details/similar2.jpg" alt=""class="img-responsive"></a>
+										  <a href=""><img src="images/product-details/similar3.jpg" alt=""class="img-responsive"></a>
 										</div>
 									</div>
 								  <!-- Controls -->
@@ -155,17 +154,40 @@
 						</div>
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
-								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
+								<img src="images/product-details/new.jpg" class="newarrival" alt="" class="img-responsive"	/>
 								<h2>Anne Klein Sleeveless Colorblock Scuba</h2>
 								<p>Web ID: 1089772</p>
-								<img src="images/product-details/rating.png" alt="" />
+								<img src="images/product-details/rating.png" alt="" class="img-responsive" />
 								<span>
 									<span>US $59</span>
 									<label>Số lượng:</label>
 									<input type="text" value="1" />
-									<button type="button" class="btn btn-fefault cart">
-										<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
-									</button>
+									<div class="btn-group">
+										<button type="button" class="btn btn-fefault cart">
+											<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
+										</button>
+										<button type="button" class="btn btn-fefault cart">
+											<i class="fa fa-heart"></i> Yêu thích
+										</button>
+									</div>
+								</span>
+								<br>
+								<span>
+									<div class="size-options">
+										<div class="col-sm-6">
+											<label class="fa-1x">Chọn kích cỡ</label>
+										</div>
+										<!-- huong dan chon size -->
+										<div class="col-sm-6">
+											<p><a href="#" data-toggle="modal" data-target="#sizeGuideModal" class="fa fa-edit"> Hướng dẫn chọn size</a></p>
+										</div>
+										<button class="size-option" data-size="38">38</button>
+										<button class="size-option" data-size="39">39</button>
+										<button class="size-option" data-size="40">40</button>
+										<button class="size-option" data-size="41">41</button>
+										<button class="size-option" data-size="42">42</button>
+										<button class="size-option" data-size="43">43</button>
+									</div>
 								</span>
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Condition:</b> New</p>
@@ -336,7 +358,6 @@
 									</div>
 								</div>
 							</div>
-							
 							<div class="tab-pane fade active in" id="reviews" >
 								<div class="col-sm-12">
 									<ul>
@@ -344,16 +365,14 @@
 										<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
 										<li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
 									</ul>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 									<p><b>Write Your Review</b></p>
-									
 									<form action="#">
 										<span>
 											<input type="text" placeholder="Your Name"/>
 											<input type="email" placeholder="Email Address"/>
 										</span>
 										<textarea name="" ></textarea>
-										<b>Rating: </b> <img src="images/product-details/rating.png" alt="" />
+										<b>Rating: </b> <img src="images/product-details/rating.png" alt=""/>
 										<button type="button" class="btn btn-default pull-right">
 											Submit
 										</button>
@@ -365,7 +384,7 @@
 					</div><!--/category-tab-->
 					
 					<div class="recommended_items"><!--recommended_items-->
-						<h2 class="title text-center">recommended items</h2>
+						<h2 class="title text-center">Sản phẩm gợi ý</h2>
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
@@ -474,15 +493,15 @@
 								<li><a href="#">Liên hệ</a></li>
 								<li><a href="#">Hướng dẫn mua hàng</a></li>
 								<li><a href="#">Giỏ hàng</a></li>
-								<li><a href="#">Hướng dẫn chọn size</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#sizeGuideModal">Hướng dẫn chọn size</a></li>
 								<li><a href="#">Chương trình khuyến mãi</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="paymethod">
-							<h2><a href="Thanh-toan.html" class="footer-text text-center">Cổng thanh toán</a></h2>
-							<div class="address">
+							<h2><a href="https://www.vnpay.vn" class="footer-text text-center">Cổng thanh toán</a></h2>
+							<div>
 								<a href="https://www.vnpay.vn">
 									<img src="images/home/vnpay.jpg" alt="VNPay" class="img-thumbnail">
 								</a>
@@ -510,7 +529,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="address">
-							<img src="images/home/hanoi.jpg" alt="" />
+							<a href="https://maps.app.goo.gl/uodXzTcT3yHVeZCn7"><img src="images/home/map.png" alt="" /></a>
 						</div>
 					</div>
 					<div class="col-sm-3">
@@ -545,8 +564,6 @@
 		
 	</footer><!--/Footer-->
 	
-
-  
     <script src="js/jquery.js"></script>
 	<script src="js/price-range.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>

@@ -366,7 +366,7 @@ ul.sub-menu {
 }
 
 .companyinfo h2  span{
-  color:#FE980F;
+  color:#26aef7;
 }
 
 .companyinfo p {
@@ -380,6 +380,7 @@ ul.sub-menu {
   text-align: center;
   color: red;
 }
+
 
 /* Custom styles for the footer images */
 .img-thumbnail {
@@ -492,14 +493,14 @@ ul.sub-menu {
 }
 
 .address  img {
-	width:50%;
+	width:80%;
   border-radius: 10px;
   border: solid 1px #1eaaf0;
   transition: all 0.3s 
 }
 
 .address img:hover {
-  transform: scale(1.1); /* Phóng to ảnh */
+  transform: scale(3); /* Phóng to ảnh */
   border: none;
 }
 
@@ -620,12 +621,12 @@ ul.sub-menu {
 #slider {
   padding-bottom: 50px;
 }
-.carousel-inner {
-  min-height: 400px; /* Định chiều cao cố định */
-}
+
+
+
 .slide-img {
   width: 100%;
-  height: 400px; /* Giữ chiều cao ảnh đồng nhất */
+  height: auto; /* Giữ chiều cao ảnh đồng nhất */
   object-fit: cover; /* Đảm bảo ảnh không bị méo */
 }
 
@@ -714,7 +715,7 @@ ul.sub-menu {
   padding-top: 15px;
 }
 .left-sidebar h2, .brands_products h2 {
-  color: #FE980F;
+  color: #000000;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -889,7 +890,7 @@ h2.title:before{
 
 
 h2.title {
-  color: #FE980F;
+  color: #000000;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -1099,6 +1100,7 @@ h2.title {
 
 .recommended_items {
   overflow: hidden;
+  padding-top: 10px;
 }
 
 #recommended-item-carousel .carousel-inner .item {
@@ -1286,6 +1288,7 @@ h2.title {
 
 .product-details{
 	overflow:hidden;
+  padding-bottom: 10rem;
 }
 
 
@@ -1317,7 +1320,7 @@ h2.title {
 }
 
 .view-product h3 {
-  background: #FE980F;
+  background: #1e98fc;
   bottom: 0;
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
@@ -1387,7 +1390,7 @@ h2.title {
 }
 
 .product-information span span {
-  color: #FE980F;
+  color: #ff1919;
   float: left;
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
@@ -1420,10 +1423,10 @@ h2.title {
 
 
 .cart {
-  background: #FE980F;
-  border: 0 none;
+  background: #f9e8f2dc;
+  border: solid 1px #e84d5f;
   border-radius: 0;
-  color: #FFFFFF;
+  color: #fc1b1b;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   margin-bottom: 10px;
@@ -1443,6 +1446,24 @@ h2.title {
 	padding-right: 0;
 }
 
+/* css kich co */
+
+.size-options {
+  margin-top: 10px;
+}
+
+.size-option {
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.size-option.active {
+  background-color: #ff3232; /* Màu nền khi được chọn */
+  color: #fff;
+}
 
 #reviews ul {
   background: #FFFFFF;
@@ -1465,13 +1486,13 @@ h2.title {
 }
 
 #reviews ul li a i{
-	color:#FE980F;
+	color:#000000;
 	padding-right:8px;
 }
 
 #reviews ul li a:hover{
 	background:#fff;
-	color:#FE980F;
+	color:#07a7d3;
 }
 
 #reviews p{
@@ -1511,7 +1532,7 @@ h2.title {
 }
 
 #reviews button {
-  background: #FE980F;
+  background: hsl(202, 100%, 56%);
   border: 0 none;
   border-radius: 0;
   color: #FFFFFF;
@@ -1519,6 +1540,9 @@ h2.title {
   font-size: 14px;
 }
 
+#reviews button:hover{
+  background:#ff1313;
+}
 
 /*************************
 *******404 CSS******
