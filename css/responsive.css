@@ -271,6 +271,20 @@ ul.sub-menu{
 
 }
 
+
+@media (max-width: 768px) 
+{
+	#do_action .cart-actions 
+	{
+		width: calc(100% - 20px); /* Điều chỉnh khoảng cách hai bên cho màn hình nhỏ hơn */
+	}
+	#do_action .cart-actions .col-xs-12 
+	{
+		text-align: center;
+	}
+}
+
+
 /* XS Portrait */
 @media (max-width: 480px) {
 

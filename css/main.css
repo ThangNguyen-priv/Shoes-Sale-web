@@ -303,7 +303,7 @@ ul.sub-menu {
 }
 
 .dropdown ul.sub-menu li .active{
-  color: #FDB45E;
+  color: #f44040;
   padding-left: 0;
 }
 
@@ -321,7 +321,7 @@ ul.sub-menu {
 }
 
 .navbar-nav li ul.sub-menu li a:hover{
-    color: #FDB45E;
+    color: #d0345e;
 }
 
 .fa-angle-down{
@@ -1465,6 +1465,7 @@ h2.title {
   color: #fff;
 }
 
+
 #reviews ul {
   background: #FFFFFF;
   border: 0 none;
@@ -1651,9 +1652,6 @@ h2.title {
   padding: 6px 25px;
 }
 
-.login-form label{
-
-}
 
 
 .login-form label input {
@@ -1684,9 +1682,42 @@ h2.title {
 *******Cart CSS******
 **************************/
 
-#do_action {
-  margin-bottom: 50px;
+#do_action .cart-actions {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 30px); /* Điều chỉnh khoảng cách hai bên */
+  max-width: 1140px; /* Tương ứng với kích thước tối đa của container Bootstrap */
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
+
+#do_action .cart-actions .btn {
+  background: #dd1b31;
+  border: 0 none;
+  border-radius: 0;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+#do_action .cart-actions .btn:hover{
+  background:#ff1313;
+}
+
+#do_action .cart-actions .btn, 
+#do_action .cart-actions input[type="checkbox"], 
+#do_action .cart-actions p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+
 
 .breadcrumbs {
   position: relative;
@@ -1699,7 +1730,7 @@ h2.title {
 }
 
 .breadcrumbs .breadcrumb li a {
-  background:#FE980F;
+  background:#0f82fe;
   color: #FFFFFF;
   padding: 3px 7px;
 }
@@ -1710,10 +1741,10 @@ h2.title {
   width: auto;
   border-width: 8px;
   border-style: solid;
-  border-color:transparent transparent transparent #FE980F;
+  border-color:transparent transparent transparent #1b8af9;
   position: absolute;
   top: 11px;
-  left:48px;
+  left:80px;
 
 }
 
@@ -1723,20 +1754,29 @@ h2.title {
 
 #cart_items .cart_info {
   border: 1px solid #E6E4DF;
-  margin-bottom: 50px
+  margin-bottom: 50px;
 }
 
 
 #cart_items .cart_info .cart_menu {
-  background: #FE980F;
+  background: #1e98fc;
   color: #fff;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
 }
 
+.cart_menu .text-center {
+  text-align: center;
+}
+
+.cart_menu .name-column {
+  width: 30%; /* Điều chỉnh kích thước cột Sản phẩm */
+}
+
+
 #cart_items .cart_info .table.table-condensed thead tr {
-  height: 51px;
+  height: 50px;
 }
 
 
@@ -1754,9 +1794,6 @@ h2.title {
 }
 
 
-#cart_items .cart_info .image {
-  padding-left: 30px;
-}
 
 
 #cart_items .cart_info .cart_description h4 {
@@ -1783,7 +1820,7 @@ h2.title {
 
 
 #cart_items .cart_info .cart_total_price {
-  color: #FE980F;
+  color: #fa1515;
   font-size: 24px;
 }
 
@@ -1826,11 +1863,12 @@ h2.title {
   background:#F0F0E9;
   color: #FFFFFF;
   padding: 5px 7px;
-  font-size: 16px
+  font-size: 16px;
 }
 
 .cart_delete a:hover {
-  background:#FE980F
+  border: 1px solid #fe1915;
+  color: #ff0000;
 }
 
 
@@ -1950,6 +1988,13 @@ h2.title {
   margin-left: 20px
 }
 
+/* khu vuc san pham recommended của card */
+
+.recommended_items_card {
+  border: 1px solid #F7F7F0;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
 
 
 /*************************
@@ -1957,8 +2002,10 @@ h2.title {
 **************************/
 
 .step-one {
-  margin-bottom: -10px
+  margin-bottom: -10px;
+  margin-top: 10px;
 }
+
 
 .register-req, .step-one .heading {
   background: none repeat scroll 0 0 #F0F0E9;
@@ -1971,6 +2018,37 @@ h2.title {
 
 .checkout-options {
   padding-left: 20px
+}
+
+.checkout-options {
+  margin-top: 20px;
+}
+
+.checkout-options .form-group {
+  margin-bottom: 15px;
+  font-size: larger;
+  color: red;
+}
+
+.checkout-options .form-control {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkout-options .btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.checkout-options .btn-default:hover {
+  background-color: #f0f0f0;
+  border-color: #d55151;
 }
 
 
@@ -2084,7 +2162,7 @@ h2.title {
 
 .order-message textarea {
   font-size: 12px;
-  height: 335px;
+  height: 200px;
   margin-bottom: 20px;
   padding: 15px 20px;
 }
@@ -2143,7 +2221,42 @@ h2.title {
   border-bottom: 1px solid #F7F7F0;
 }
 
+.text-center {
+  text-align: center;
+}
 
+.vnpay-image {
+  display: inline-block;
+  border-radius: 20px;
+}
+.vnpay-image img {
+  width: 50%; /* Bạn có thể thay đổi giá trị này để điều chỉnh kích cỡ */
+  height: auto; /* Đảm bảo ảnh giữ nguyên tỉ lệ */
+  border: 1px solid #28a6f4;
+}
+
+.img-qrcode {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%; /* Thu nhỏ ảnh */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+.vnpay-info {
+  margin-left: auto;
+  text-align: right; /* Đảm bảo văn bản căn phải trong div */
+  margin-top: 10%;
+}
+
+.vnpay-info span{
+  color: red;
+}
 
 
 /*************************
@@ -2597,6 +2710,84 @@ h2.title {
   margin-bottom: 20px;
 }
 
+/* .contact-form .form-group input {
+  background: rgb(217, 218, 212);
+  border: 1px solid #F0F0E9;
+  color: #000000;
+  font-size: 14px;
+  height: 40px;
+  padding: 0 15px;
+  width: 30%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .form-group input:hover {
+  border: 1px solid #ec3820;
+  color: #ec3820;
+} */
+
+/* button contact */
+
+/* From Uiverse.io by eirikvold */ 
+.btn-sent{
+  font-family: inherit;
+  font-size: 18px;
+  background: linear-gradient(to bottom, #4dc7d9 0%,#66a6ff 100%);
+  color: white;
+  padding: 0.4em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.btn-sent:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-sent:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-sent span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+.btn-sent svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+.btn-sent .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+.btn-sent:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-sent:hover svg {
+  transform: rotate(45deg);
+}
+
+
 #contact-page 
 .form-control::-moz-placeholder {
   color: #8D8D8D;
@@ -2628,7 +2819,7 @@ h2.title {
 #contact-page .form-control:focus, 
 #contact-page .form-control:hover {
   box-shadow: inherit;
-  border-color: #FDB45E;
+  border-color: #5ea6fd;
 }
 
 #contact-page .contact-info {
@@ -2650,6 +2841,7 @@ h2.title {
 .social-networks{
   overflow: hidden;
   text-align: center;
+  padding-top: 20px;
 }
 
 .social-networks ul {
@@ -2679,7 +2871,7 @@ h2.title {
 }
 
 .contact-info .social-networks ul li a:hover{
-  color: #FE980F;
+  color: #299bff;
 }
 
 

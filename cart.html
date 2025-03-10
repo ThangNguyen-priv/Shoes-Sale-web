@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Cart | E-Shopper</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+	<section id="cart_items">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ol class="breadcrumb">
+				  <li><a href="trangchu2.html">Trang chủ</a></li>
+				  <li class="active">Giỏ hàng</li>
+				</ol>
+			</div>
+			<div class="table-responsive cart_info">
+				<table class="table table-condensed">
+					<thead>
+						<tr class="cart_menu">
+							<td class="text-center"><input type="checkbox" id="select-all" class="select-all"></td>
+							<td class="name-column">Sản phẩm</td>
+							<td class="description">Phân loại</td>
+							<td class="price">Giá</td>
+							<td class="quantity">Số lượng</td>
+							<td class="total">Tổng tiền</td>
+							<td>Thao tác</td>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr class="cart_items">
+							<td class="text-center">
+								<input type="checkbox" id="select-all" class="select-all">
+							</td>
+							<td class="cart_product">
+								<h4><a href="">e phọt oăn</a></h4>
+							</td>
+							<td class="cart_description">
+								<h4><a href="">Giày thể thao nike</a></h4>
+								<p>Web ID: 1089772</p>
+							</td>
+							<td class="cart_price">
+								<p>1.500.000đ</p>
+							</td>
+							<td class="cart_quantity">
+								<div class="cart_quantity_button">
+									<a class="cart_quantity_up" href=""> + </a>
+									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+									<a class="cart_quantity_down" href=""> - </a>
+								</div>
+							</td>
+							<!-- 2 nut nay chưa hoàn thiện js -->
+							<td class="cart_total">
+								<p class="cart_total_price">1.500.000đ</p>
+							</td>
+							<td class="cart_delete">
+								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<!-- khu vực chọn sản phẩm và chuyển sang mục thanh toán -->
+	<section id="do_action">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="cart-actions">
+						<div class="row">
+							<div class="col-xs-12 col-sm-1">
+								<input type="checkbox" id="select-all" class="select-all">
+								<label for="select-all">Chọn tất cả</label>
+							</div>
+							<div class="col-xs-12 col-sm-1">
+								<button type="button" class="btn btn-danger">Xóa</button>
+							</div>
+							<div class="col-xs-12 col-sm-2">
+								<button type="button" class="btn btn-danger">Xóa tất cả</button>
+							</div>
+							<div class="col-xs-12 col-sm-2">
+								<button type="button" class="btn btn-warning">Lưu vào yêu thích</button>
+							</div>
+							<div class="col-xs-12 col-sm-2">
+								<p>Tổng thanh toán: <span id="total-products">(1 sản phẩm)</span></p>
+							</div>
+							<div class="col-xs-12 col-sm-2">
+								<p>Tổng tiền: <span id="total-price">1.500.000</span></p>
+							</div>
+							<div class="col-xs-12 col-sm-2">
+								<button type="button" class="btn btn-primary">Mua hàng</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Khu vuc san pham recommended -->
+	<section>
+		<div class="container">
+			<div class="recommended_items_card">
+				<h2 class="title text>center">Sản phẩm gợi ý</h2>
+			</div>
+			<div class="col-sm-3">
+				<div class="product-image-wrapper">
+					<div class="single-products">
+						<div class="productinfo text-center">
+							<img src="images/home/gallery1.jpg" alt="" />
+							<h2>$56</h2>
+							<p>Easy Polo Black Edition</p>
+							<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="product-image-wrapper">
+					<div class="single-products">
+						<div class="productinfo text-center">
+							<img src="images/home/gallery1.jpg" alt="" />
+							<h2>$56</h2>
+							<p>Easy Polo Black Edition</p>
+							<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="product-image-wrapper">
+					<div class="single-products">
+						<div class="productinfo text-center">
+							<img src="images/home/gallery1.jpg" alt="" />
+							<h2>$56</h2>
+							<p>Easy Polo Black Edition</p>
+							<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="product-image-wrapper">
+					<div class="single-products">
+						<div class="productinfo text-center">
+							<img src="images/home/gallery1.jpg" alt="" />
+							<h2>$56</h2>
+							<p>Easy Polo Black Edition</p>
+							<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+
+
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

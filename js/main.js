@@ -63,29 +63,51 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 //hướng dẫn chọn size khi ấn vào link footer
 document.addEventListener("DOMContentLoaded", function () {
-    // Tạo modal và thêm vào body
-    const modalHTML = `
-        <div id="sizeGuideModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Hướng dẫn chọn size</h4>
-                    </div>
-                    <div class="modal-body">
-                        <img src="https://myshoes.vn/image/catalog/banner/chon-size.png" alt="Hướng dẫn chọn size" class="img-responsive">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-                    </div>
-                </div>
-            </div>
-        </div>`;
+	// Tạo modal và thêm vào body
+	const modalHTML = `
+		<div id="sizeGuideModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Hướng dẫn chọn size</h4>
+					</div>
+					<div class="modal-body">
+						<iframe src="chonsize.html" style="width:100%; height:400px;" frameborder="0"></iframe>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+					</div>
+				</div>
+			</div>
+		</div>`;
 
-    document.body.insertAdjacentHTML("beforeend", modalHTML);
+	document.body.insertAdjacentHTML("beforeend", modalHTML);
 });
 
 $(document).on("click", "#openSizeGuide", function (e) {
 	e.preventDefault();
 	$("#sizeGuideModal").modal("show");
+});
+
+
+// nut cộng và trừ số lượng sản phẩm trong card (chưa hoàn thiện)
+$(document).ready(function() {
+    // Xử lý sự kiện click cho nút tăng số lượng
+    $('.cart_quantity_up').click(function(e) {
+        e.preventDefault();
+        var input = $(this).siblings('.cart_quantity_input');
+        var currentValue = parseInt(input.val());
+        input.val(currentValue + 1);
+    });
+
+    // Xử lý sự kiện click cho nút giảm số lượng
+    $('.cart_quantity_down').click(function(e) {
+        e.preventDefault();
+        var input = $(this).siblings('.cart_quantity_input');
+        var currentValue = parseInt(input.val());
+        if (currentValue > 1) {
+            input.val(currentValue - 1);
+        }
+    });
 });
